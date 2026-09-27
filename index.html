@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GanLavarTopup | Free Fire Top Up</title>
+  <meta name="description" content="GanLavarTopup - Fast, Easy & Trusted Free Fire Top Up">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #07111f;
+      color: white;
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    header {
+      background: #0b1728;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #19304d;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #4fd1ff;
+    }
+
+    .menu-btn {
+      background: #132943;
+      border: 1px solid #24517b;
+      color: white;
+      padding: 9px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 55px 20px 45px;
+      background:
+        radial-gradient(circle at top, #123d63 0%, #07111f 55%);
+    }
+
+    .hero h1 {
+      font-size: 38px;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+
+    .hero h1 span {
+      color: #4fd1ff;
+    }
+
+    .hero p {
+      color: #b7c7d9;
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 13px 22px;
+      background: #12a8e8;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .hero-btn:hover {
+      background: #078fc8;
+    }
+
+    /* CONTAINER */
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 35px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    .section-title span {
+      color: #4fd1ff;
+    }
+
+    /* SEARCH */
+    .search-box {
+      margin-bottom: 25px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #254765;
+      background: #0c1b2d;
+      color: white;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .search-box input::placeholder {
+      color: #7890a8;
+    }
+
+    /* FILTER */
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+
+    .category-btn {
+      border: 1px solid #275274;
+      background: #0d2035;
+      color: #c7d7e8;
+      padding: 9px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .category-btn.active,
+    .category-btn:hover {
+      background: #12a8e8;
+      color: white;
+    }
+
+    /* PRODUCTS */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+    }
+
+    .product {
+      background: #0c1b2d;
+      border: 1px solid #1c3853;
+      border-radius: 14px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    .product:hover {
+      transform: translateY(-3px);
+      border-color: #24b8f5;
+    }
+
+    .diamond-icon {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    .product h3 {
+      font-size: 19px;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      color: #4fd1ff;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .buy-btn {
+      width: 100%;
+      border: none;
+      background: #12a8e8;
+      color: white;
+      padding: 11px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .buy-btn:hover {
+      background: #078fc8;
+    }
+
+    /* PAYMENT */
+    .payment-box {
+      margin-top: 40px;
+      background: #0c1b2d;
+      border: 1px solid #1c3853;
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .payment-box h2 {
+      margin-bottom: 15px;
+    }
+
+    .payment-number {
+      background: #07111f;
+      border: 1px dashed #3c668b;
+      padding: 14px;
+      border-radius: 9px;
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    .payment-number span {
+      color: #4fd1ff;
+      font-weight: bold;
+    }
+
+    /* ORDER */
+    .order-box {
+      margin-top: 40px;
+      background: #0c1b2d;
+      border: 1px solid #1c3853;
+      border-radius: 15px;
+      padding: 25px;
+    }
+
+    .order-box h2 {
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 7px;
+      color: #c7d7e8;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 13px;
+      border-radius: 9px;
+      border: 1px solid #284a68;
+      background: #07111f;
+      color: white;
+      outline: none;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 9px;
+      background: #19b968;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    .submit-btn:hover {
+      background: #149954;
+    }
+
+    /* INFO */
+    .info {
+      margin-top: 35px;
+      background: #0c1b2d;
+      border: 1px solid #1c3853;
+      border-radius: 15px;
+      padding: 25px;
+      line-height: 1.8;
+      color: #b9c9d9;
+    }
+
+    .info h2 {
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 40px;
+      background: #050c15;
+      border-top: 1px solid #19304d;
+      text-align: center;
+      padding: 25px 15px;
+      color: #8295aa;
+      line-height: 1.8;
+    }
+
+    footer strong {
+      color: #4fd1ff;
+    }
+
+    /* TOAST */
+    #toast {
+      display: none;
+      position: fixed;
+      left: 50%;
+      bottom: 25px;
+      transform: translateX(-50%);
+      background: #15283c;
+      border: 1px solid #315775;
+      color: white;
+      padding: 13px 18px;
+      border-radius: 9px;
+      z-index: 999;
+      max-width: 90%;
+      text-align: center;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .hero {
+        padding-top: 40px;
+      }
+
+      .section-title {
+        font-size: 24px;
+      }
+
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .product {
+        padding: 15px 10px;
+      }
+
+      .product h3 {
+        font-size: 16px;
+      }
+
+      .price {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">💎 GanLavarTopup</div>
+    <button class="menu-btn" onclick="scrollToOrder()">Order</button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Fast <span>•</span> Easy <span>•</span> Trusted</h1>
+
+    <p>
+      GanLavarTopup থেকে আপনার Free Fire-এর
+      Diamond ও Membership সহজে অর্ডার করুন।
+    </p>
+
+    <a href="#products" class="hero-btn">
+      💎 View Packages
+    </a>
+  </section>
+
+  <!-- PRODUCTS -->
+  <main class="container" id="products">
+
+    <h2 class="section-title">
+      💎 Diamond <span>Packages</span>
+    </h2>
+
+    <!-- SEARCH -->
+    <div class="search-box">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="🔎 Diamond বা Package খুঁজুন..."
+        oninput="filterProducts()"
+      >
+    </div>
+
+    <!-- FILTER -->
+    <div class="filters">
+      <button
+        class="category-btn active"
+        onclick="setCategory('all', this)"
+      >
+        All
+      </button>
+
+      <button
+        class="category-btn"
+        onclick="setCategory('diamond', this)"
+      >
+        💎 Diamond
+      </button>
+
+      <button
+        class="category-btn"
+        onclick="setCategory('membership', this)"
+      >
+        👑 Membership
+      </button>
+    </div>
+
+    <!-- PRODUCT LIST -->
+    <div class="products" id="productList">
+
+      <div class="product" data-category="diamond" data-name="25 Diamond">
+        <div class="diamond-icon">💎</div>
+        <h3>25 Diamond</h3>
+        <div class="price">৳20</div>
+        <button class="buy-btn" onclick="selectProduct('25 Diamond - ৳20')">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="product" data-category="diamond" data-name="50 Diamond">
+        <div class="diamond-icon">💎</div>
+        <h3>50 Diamond</h3>
+        <div class="price">৳35</div>
+        <button class="buy-btn" onclick="selectProduct('50 Diamond - ৳35')">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="product" data-category="diamond" data-name="75 Diamond">
+        <div class="diamond-icon">💎</div>
+        <h3>75 Diamond</h3>
+        <div class="price">৳55</div>
+        <button class="buy-btn" onclick="selectProduct('75 Diamond - ৳55')">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="product" data-category="diamond" data-name="100 Diamond">
+        <div class="diamond-icon">💎</div>
+        <h3>100 Diamond</h3>
+        <div class="price">৳70</div>
+        <button class="buy-btn" onclick="selectProduct('100 Diamond - ৳70')">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="product" data-category="diamond" data-name="115 Diamond">
+        <div class="diamond-icon">💎</div>
+        <h3>115 Diamond</h3>
+        <div class="price">৳79</div>
+        <button class="buy-btn" onclick="selectProduct('115 Diamond - ৳79')">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="product" data-category="diamond" data-name="240 Diamond">
+        <div class="diamond-icon">💎</div>
+        <h3>240 Diamond</h3>
+        <div class="price">৳158</div>
+        <button class="buy-btn" onclick="selectProduct('240 Diamond - ৳158')">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="product" data-category="diamond" data-name="355 Diamond">
+        <div class="diamond-icon">💎</div>
+        <h3>355 Diamond</h3>
+        <div class="price">৳237</div>
+        <button class="buy-btn" onclick="selectProduct('355 Diamond - ৳237')">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="product" data-category="diamond" data-name="480 Diamond">
+        <div class="diamond-icon">💎</div>
+        <h3>480 Diamond</h3>
+        <div class="price">৳316</div>
+        <button class="buy-btn" onclick="selectProduct('480 Diamond - ৳316')">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="product" data-category="diamond" data-name="505 Diamond">
+        <div class="diamond-icon">💎</div>
+        <h3>505 Diamond</h3>
+        <div class="price">৳336</div>
+        <button class="buy-btn" onclick="selectProduct('505 Diamond - ৳336')">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="product" data-category="diamond" data-name="610 Diamond">
+        <div class="diamond-icon">💎</div>
+        <h3>610 Diamond</h3>
+        <div class="price">৳400</div>
+        <button class="buy-btn" onclick="selectProduct('610 Diamond - ৳400')">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="product" data-category="diamond" data-name="725 Diamond">
+        <div class="diamond-icon">💎</div>
+        <h3>725 Diamond</h3>
+        <div class="price">৳479</div>
+        <button class="buy-btn" onclick="selectProduct('725 Diamond - ৳479')">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="product" data-category="diamond" data-name="850 Diamond">
+        <div class="diamond-icon">💎</div>
+        <h3>850 Diamond</h3>
+        <div class="price">৳558</div>
+        <button class="buy-btn" onclick="selectProduct('850 Diamond - ৳558')">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="product" data-category="diamond" data-name="965 Diamond">
+        <div class="diamond-icon">💎</div>
+        <h3>965 Diamond</h3>
+        <div class="price">৳637</div>
+        <button class="buy-btn" onclick="selectProduct('965 Diamond - ৳637')">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="product" data-category="diamond" data-name="1090 Diamond">
+        <div class="diamond-icon">💎</div>
+        <h3>1090 Diamond</h3>
+        <div class="price">৳716</div>
+        <button class="buy-btn" onclick="selectProduct('1090 Diamond - ৳716')">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="product" data-category="diamond" data-name="1240 Diamond">
+        <div class="diamond-icon">💎</div>
+        <h3>1240 Diamond</h3>
+        <div class="price">৳800</div>
+        <button class="buy-btn" onclick="selectProduct('1240 Diamond - ৳800')">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="product" data-category="diamond" data-name="1850 Diamond">
+        <div class="diamond-icon">💎</div>
+        <h3>1850 Diamond</h3>
+        <div class="price">৳1200</div>
+        <button class="buy-btn" onclick="selectProduct('1850 Diamond - ৳1200')">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="product" data-category="diamond" data-name="2530 Diamond">
+        <div class="diamond-icon">💎</div>
+        <h3>2530 Diamond</h3>
+        <div class="price">৳1610</div>
+        <button class="buy-btn" onclick="selectProduct('2530 Diamond - ৳1610')">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="product" data-category="diamond" data-name="5060 Diamond">
+        <div class="diamond-icon">💎</div>
+        <h3>5060 Diamond</h3>
+        <div class="price">৳3220</div>
+        <button class="buy-btn" onclick="selectProduct('5060 Diamond - ৳3220')">
+          Buy Now
+        </button>
+      </div>
+
+      <!-- MEMBERSHIP -->
+
+      <div class="product" data-category="membership" data-name="Weekly Lite">
+        <div class="diamond-icon">👑</div>
+        <h3>Weekly Lite</h3>
+        <div class="price">৳39</div>
+        <button class="buy-btn" onclick="selectProduct('Weekly Lite - ৳39')">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="product" data-category="membership" data-name="Weekly">
+        <div class="diamond-icon">👑</div>
+        <h3>Weekly</h3>
+        <div class="price">৳155</div>
+        <button class="buy-btn" onclick="selectProduct('Weekly - ৳155')">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="product" data-category="membership" data-name="Monthly">
+        <div class="diamond-icon">👑</div>
+        <h3>Monthly</h3>
+        <div class="price">৳760</div>
+        <button class="buy-btn" onclick="selectProduct('Monthly - ৳760')">
+          Buy Now
+        </button>
+      </div>
+
+    </div>
+
+    <!-- PAYMENT -->
+    <div class="payment-box">
+      <h2>💳 Payment Information</h2>
+
+      <div class="payment-number">
+        <span>bKash</span><br>
+        01859891424
+      </div>
+
+      <div class="payment-number">
+        <span>Nagad</span><br>
+        01859891424
+      </div>
+
+      <p style="color:#91a6ba;margin-top:12px;">
+        Payment করার পর Transaction ID অবশ্যই Order Form-এ দিন।
+      </p>
+    </div>
+
+    <!-- ORDER -->
+    <div class="order-box" id="order">
+
+      <h2>🛒 Place Your Order</h2>
+
+      <div class="form-group">
+        <label>🎮 Free Fire Player ID</label>
+        <input
+          type="text"
+          id="playerId"
+          placeholder="আপনার Player ID লিখুন"
+        >
+      </div>
+
+      <div class="form-group">
+        <label>📦 Select Package</label>
+
+        <select id="package">
+          <option value="">-- Package নির্বাচন করুন --</option>
+
+          <option>25 Diamond - ৳20</option>
+          <option>50 Diamond - ৳35</option>
+          <option>75 Diamond - ৳55</option>
+          <option>100 Diamond - ৳70</option>
+          <option>115 Diamond - ৳79</option>
+          <option>240 Diamond - ৳158</option>
+          <option>355 Diamond - ৳237</option>
+          <option>480 Diamond - ৳316</option>
+          <option>505 Diamond - ৳336</option>
+          <option>610 Diamond - ৳400</option>
+          <option>725 Diamond - ৳479</option>
+          <option>850 Diamond - ৳558</option>
+          <option>965 Diamond - ৳637</option>
+          <option>1090 Diamond - ৳716</option>
+          <option>1240 Diamond - ৳800</option>
+          <option>1850 Diamond - ৳1200</option>
+          <option>2530 Diamond - ৳1610</option>
+          <option>5060 Diamond - ৳3220</option>
+
+          <option>Weekly Lite - ৳39</option>
+          <option>Weekly - ৳155</option>
+          <option>Monthly - ৳760</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>💳 Payment Method</label>
+
+        <select id="payment">
+          <option value="">-- Payment Method --</option>
+          <option>bKash</option>
+          <option>Nagad</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>🧾 Transaction ID</label>
+
+        <input
+          type="text"
+          id="transactionId"
+          placeholder="Transaction ID লিখুন"
+        >
+      </div>
+
+      <button class="submit-btn" onclick="sendOrder()">
+        📱 WhatsApp-এ Order পাঠান
+      </button>
+
+    </div>
+
+    <!-- INFO -->
+    <div class="info">
+      <h2>ℹ️ কীভাবে অর্ডার করবেন?</h2>
+
+      <p>
+        ১. আপনার পছন্দের Diamond অথবা Membership নির্বাচন করুন।<br>
+        ২. আপনার Free Fire Player ID দিন।<br>
+        ৩. bKash অথবা Nagad-এর মাধ্যমে Payment করুন।<br>
+        ৪. Transaction ID লিখুন।<br>
+        ৫. WhatsApp-এর মাধ্যমে Order পাঠান।
+      </p>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <strong>💎 GanLavarTopup</strong><br>
+    Fast • Easy • Trusted Top Up<br><br>
+    © 2026 GanLavarTopup. All Rights Reserved.
+  </footer>
+
+  <!-- TOAST -->
+  <div id="toast"></div>
+
+  <script>
+
+    let currentCategory = "all";
+
+    /* SELECT PRODUCT */
+    function selectProduct(productName) {
+
+      const packageSelect =
+        document.getElementById("package");
+
+      packageSelect.value = productName;
+
+      document.getElementById("order")
+        .scrollIntoView({
+          behavior: "smooth"
+        });
+
+      showToast("✅ Package নির্বাচন করা হয়েছে");
+    }
+
+
+    /* CATEGORY */
+    function setCategory(category, button) {
+
+      currentCategory = category;
+
+      document
+        .querySelectorAll(".category-btn")
+        .forEach(function(btn) {
+          btn.classList.remove("active");
+        });
+
+      button.classList.add("active");
+
+      filterProducts();
+    }
+
+
+    /* SEARCH + FILTER */
+    function filterProducts() {
+
+      const searchText =
+        document.getElementById("searchInput")
+          .value
+          .toLowerCase()
+          .trim();
+
+      const products =
+        document.querySelectorAll(".product");
+
+      products.forEach(function(product) {
+
+        const name =
+          product.dataset.name.toLowerCase();
+
+        const category =
+          product.dataset.category;
+
+        const matchesSearch =
+          name.includes(searchText);
+
+        const matchesCategory =
+          currentCategory === "all" ||
+          category === currentCategory;
+
+        if (matchesSearch && matchesCategory) {
+          product.style.display = "";
+        } else {
+          product.style.display = "none";
+        }
+
+      });
+    }
+
+
+    /* SCROLL TO ORDER */
+    function scrollToOrder() {
+
+      document.getElementById("order")
+        .scrollIntoView({
+          behavior: "smooth"
+        });
+    }
+
+
+    /* SEND ORDER */
+    function sendOrder() {
+
+      const playerId =
+        document.getElementById("playerId")
+          .value.trim();
+
+      const packageName =
+        document.getElementById("package")
+          .value;
+
+      const payment =
+        document.getElementById("payment")
+          .value;
+
+      const transactionId =
+        document.getElementById("transactionId")
+          .value.trim();
+
+
+      if (!playerId) {
+        showToast("⚠️ Player ID দিন");
+        return;
+      }
+
+      if (!packageName) {
+        showToast("⚠️ Package নির্বাচন করুন");
+        return;
+      }
+
+      if
